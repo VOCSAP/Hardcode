@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nugget name="HARDCODE_V2.1">
+<nugget name="HARDCODE_V2.2">
  <CLAS CLSNAME="ZCL_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" CLSFINAL="X" CLSCCINCL="X" FIXPT="X" UNICODE="X" CLSBCCAT="00" DURATION_TYPE="0 " RISK_LEVEL="0 " ZSAPLINK_PLUGIN_MAJOR_VERSION="0 " ZSAPLINK_PLUGIN_MINOR_VERSION="1 " ZSAPLINK_PLUGIN_BUILD_VERSION="0 " ZSAPLINK_PLUGIN_INFO1="ZSAPLINK_CLASS is part of the main ZSAPLINK project --&gt; This plugin found there instead of ZSAPLINK_PLUGINS projects" ZSAPLINK_PLUGIN_INFO2="SAPLINK homepage: https://www.assembla.com/spaces/saplink/wiki" ZSAPLINK_PLUGIN_INFO3="Download from https://www.assembla.com/code/saplink/subversion/nodes" ZSAPLINK_PLUGIN_INFO4="and navigate to:  trunk -&gt; core -&gt; ZSAPLINK -&gt; CLAS -&gt; ZSAPLINK_CLASS.slnk">
   <types CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TY_HARDCODE_VERSION" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="1 " TYPTYPE="4" SRCROW1="4 " SRCCOLUMN1="4 " SRCROW2="9 " SRCCOLUMN2="31 " TYPESRC_LENG="0 " TYPESRC="BEGIN OF ty_hardcode_version.
           INCLUDE TYPE ztec_t_hc_vers.
@@ -3664,6 +3664,12 @@ ENDMETHOD.</source>
   DATA :
     ls_hardcode_instance TYPE ty_hardcode_instance.
 
+***------------------------------------------------------------------***
+**                            INSTANCES                               **
+***------------------------------------------------------------------***
+  DATA :
+        lo_cx_exception TYPE REF TO cx_root.
+
 ***==================================================================***
 **                           TRAITEMENT                               **
 ***==================================================================***
@@ -3679,9 +3685,17 @@ ENDMETHOD.</source>
       &quot; Aucune instance trouvée pour ce Programme
       &quot;&quot;  --&gt; Création nouvelle
       ls_hardcode_instance-repid = iv_repid.
-      CREATE OBJECT ls_hardcode_instance-instance
-        EXPORTING
-          iv_repid = iv_repid.
+      TRY.
+          CREATE OBJECT ls_hardcode_instance-instance
+            EXPORTING
+              iv_repid = iv_repid.
+
+        CATCH zcx_hardcode INTO lo_cx_exception.
+          &quot; Une erreur est survenue
+          &quot;&quot;  --&gt; Retourne l&apos;exception
+          zcl_hardcode=&gt;__raise_exception( lo_cx_exception ).
+
+      ENDTRY.
 
       &quot;&quot;  --&gt; Ajout de l&apos;entrée
       INSERT ls_hardcode_instance INTO TABLE zcl_hardcode=&gt;mt_hardcode_instance.
@@ -3693,11 +3707,11 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Récupération Valeur" EXPOSURE="2" STATE="1" EDITORDER="3 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Récupération Valeur" EXPOSURE="2" STATE="1" EDITORDER="3 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" SCONAME="IV_VERSION_ID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - ID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_VERSION_ID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" SCONAME="IV_PARAMETER_NAME" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - Nom" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ANY"/>
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" SCONAME="RT_VALUE" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Valeurs Attributs" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="TT_ATTRIBUTE_VALUE"/>
-   <exception CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" SCONAME="ZCX_HARDCODE" VERSION="1" LANGU="F" MTDTYPE="0" EDITORDER="1 "/>
+   <exception CLSNAME="ZCL_HARDCODE" CMPNAME="PARAMETER_VALUE_GET" SCONAME="ZCX_HARDCODE" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe Exception" MTDTYPE="0" EDITORDER="1 "/>
    <source>METHOD PARAMETER_VALUE_GET.
 *&amp;---------------------------------------------------------------------*
 *&amp; Méthode         : PARAMETER_VALUE_GET                               *
@@ -3836,7 +3850,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE" CMPNAME="__RAISE_EXCEPTION" VERSION="1" LANGU="F" DESCRIPT="Lève une exception" EXPOSURE="0" STATE="1" EDITORDER="3 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE" CMPNAME="__RAISE_EXCEPTION" VERSION="1" LANGU="F" DESCRIPT="Lève une exception" EXPOSURE="0" STATE="1" EDITORDER="3 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="__RAISE_EXCEPTION" SCONAME="IO_EXCEPTION" VERSION="1" LANGU="F" DESCRIPT="Abstract Superclass for All Global Exceptions" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="3" TYPE="CX_ROOT" PAROPTIONL="X" PARPREFERD="X"/>
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="__RAISE_EXCEPTION" SCONAME="IV_MSGID" VERSION="1" LANGU="F" DESCRIPT="Zone système ABAP : classe de messages" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="0" TYPTYPE="1" TYPE="SY-MSGID" PARVALUE="ZCL_HARDCODE=&gt;MC_MY_MSGID"/>
    <parameter CLSNAME="ZCL_HARDCODE" CMPNAME="__RAISE_EXCEPTION" SCONAME="IV_MSGNO" VERSION="1" LANGU="F" DESCRIPT="Zone système ABAP : numéro du message" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="0" TYPTYPE="1" TYPE="SY-MSGNO" PAROPTIONL="X"/>
@@ -3924,7 +3938,7 @@ ENDMETHOD.</source>
   <typeClasDef CLSNAME="ZCL_HARDCODE_SHM" TYPEGROUP="ZCL_HARDCODE" VERSION="1" TPUTYPE="1" IMPLICIT="X"/>
   <attribute CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="MO_ATTACH_READ" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="3 " ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="3" TYPE="ZCL_HARDCODE_SHM_AREA" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
   <attribute CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="MT_INSTANCE" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="1 " ATTDECLTYP="1" ATTEXPVIRT="0" TYPTYPE="1" TYPE="TT_INSTANCE" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
-  <attribute CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="MV_REPID" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="2 " ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="1" TYPE="SY-REPID" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="MV_KEY" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="2 " ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="1" TYPE="SY-REPID" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
   <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="CONSTRUCTOR" VERSION="1" LANGU="F" DESCRIPT="CONSTRUCTOR" EXPOSURE="0" STATE="1" EDITORDER="1 " DISPID="0 " MTDTYPE="2" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="CONSTRUCTOR" SCONAME="IV_REPID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Identifiant" CMPTYPE="1" MTDTYPE="2" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="CLIKE"/>
    <exception CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="CONSTRUCTOR" SCONAME="ZCX_HARDCODE_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Exception - Gestion SHM" MTDTYPE="2" EDITORDER="1 "/>
@@ -3972,16 +3986,16 @@ ENDMETHOD.</source>
       &quot; -----------------------------------------------------------
 
       &quot; Initialisation Attribut
-      me-&gt;mv_repid = iv_repid.
+      me-&gt;mv_key = |{ sy-mandt }{ iv_repid }|.
 
       &quot; Lecture de la version courante
-      me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( iv_repid ) ).
+      me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_key ) ).
 
     CATCH cx_shm_no_active_version INTO lo_cx_exception.
       &quot; Aucune version existante
       TRY.
           &quot;&quot;  --&gt; Création instance d&apos;écriture
-          lo_attach_write = zcl_hardcode_shm_area=&gt;attach_for_write( CONV shm_inst_name( iv_repid  ) ).
+          lo_attach_write = zcl_hardcode_shm_area=&gt;attach_for_write( CONV shm_inst_name( me-&gt;mv_key  ) ).
 
           &quot;&quot;  --&gt; Création d&apos;une nouvelle version
           CREATE OBJECT lo_hardcode_root AREA HANDLE lo_attach_write
@@ -3995,7 +4009,7 @@ ENDMETHOD.</source>
           lo_attach_write-&gt;detach_commit( ).
 
           &quot;&quot;  --&gt; Récupère l&apos;instance de lecture
-          me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( iv_repid ) ).
+          me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_key ) ).
 
         CATCH cx_root INTO lo_cx_exception.
           &quot; Une erreur est survenue
@@ -4011,10 +4025,10 @@ ENDMETHOD.</source>
           CLEAR : me-&gt;mo_attach_read.
 
           &quot;&quot;  --&gt; Invalide l&apos;instance
-          zcl_hardcode_shm_area=&gt;invalidate_instance( CONV shm_inst_name( iv_repid ) ).
+          zcl_hardcode_shm_area=&gt;invalidate_instance( CONV shm_inst_name( me-&gt;mv_key ) ).
 
           &quot;&quot;  --&gt; Suppression de l&apos;Instance
-          zcl_hardcode_shm_area=&gt;free_instance( CONV shm_inst_name( iv_repid ) ).
+          zcl_hardcode_shm_area=&gt;free_instance( CONV shm_inst_name( me-&gt;mv_key ) ).
 
         CATCH cx_shm_parameter_error.
 
@@ -4040,7 +4054,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="GET_INSTANCE" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Récupération Instance" EXPOSURE="2" STATE="1" EDITORDER="3 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="GET_INSTANCE" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Récupération Instance" EXPOSURE="2" STATE="1" EDITORDER="4 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="GET_INSTANCE" SCONAME="IV_REPID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Identifiant" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="SY-REPID"/>
    <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="GET_INSTANCE" SCONAME="RO_INSTANCE" VERSION="1" LANGU="F" DESCRIPT="Hardcode - GestionSHM" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="3" TYPE="ZCL_HARDCODE_SHM"/>
    <exception CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="GET_INSTANCE" SCONAME="ZCX_HARDCODE_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Exception - Gestion SHM" MTDTYPE="0" EDITORDER="1 "/>
@@ -4118,7 +4132,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_FINISH" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Libération Token" EXPOSURE="2" STATE="1" EDITORDER="6 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_FINISH" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Libération Token" EXPOSURE="2" STATE="1" EDITORDER="7 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <exception CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_FINISH" SCONAME="ZCX_HARDCODE_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Exception - Gestion SHM" MTDTYPE="0" EDITORDER="1 "/>
    <source>METHOD hardcode_finish.
 *&amp;---------------------------------------------------------------------*
@@ -4152,7 +4166,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_GET" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Récupération" EXPOSURE="2" STATE="1" EDITORDER="4 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_GET" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Récupération" EXPOSURE="2" STATE="1" EDITORDER="5 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_GET" SCONAME="IV_VERSION_PRIMARY_ONLY" VERSION="1" LANGU="F" DESCRIPT="Uniquement version primaire ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN"/>
    <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_GET" SCONAME="RT_HARDCODE" VERSION="1" LANGU="F" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="ZCL_HARDCODE=&gt;TT_HARDCODE"/>
    <exception CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_GET" SCONAME="ZCX_HARDCODE_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Exception - Gestion SHM" MTDTYPE="0" EDITORDER="1 "/>
@@ -4194,7 +4208,7 @@ ENDMETHOD.</source>
         me-&gt;hardcode_finish( ).
 
         &quot;&quot;  --&gt; Récupération nouvelle version
-        me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_repid ) ).
+        me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_key ) ).
 
       ENDIF.
 
@@ -4209,7 +4223,44 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_RELOAD" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Recharge" EXPOSURE="2" STATE="1" EDITORDER="5 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_IS_LOAD" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Présent en SHM ?" EXPOSURE="2" STATE="1" EDITORDER="9 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_IS_LOAD" SCONAME="IV_REPID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Identifiant" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="SY-REPID"/>
+   <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_IS_LOAD" SCONAME="RV_IN_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode présent en SHM" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="XSDBOOLEAN"/>
+   <source>METHOD hardcode_is_load.
+*&amp;---------------------------------------------------------------------*
+*&amp; Méthode         : HARDCODE_IS_LOAD                                  *
+*&amp; Classe          : ZCL_HARDCODE_SHM                                  *
+*&amp; Description     : Hardcode chargé en SHM ?                          *
+*                                                                      *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp; Créé par     : Olivier Véhier                                       *
+*                                                                      *
+*&amp; Créé le      : 01/02/2017                                           *
+*                                                                      *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp; Liste des modifications                                             *
+*&amp; Auteur      Date       Signature  Objet de la modification          *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*                                                                      *
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+  &quot; -----------------------------------------------------------
+  &quot; Contrôle présence des Hardcodes en SHM
+  &quot; -----------------------------------------------------------
+
+  &quot; Retourne Indicateur Vrai si les Informations d&apos;Instance sont non vides
+  rv_in_shm = xsdbool( NOT zcl_hardcode_shm_area=&gt;get_instance_infos(
+      |{ sy-mandt }{ iv_repid }| ) IS INITIAL ).
+
+ENDMETHOD.</source>
+  </method>
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_RELOAD" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Recharge" EXPOSURE="2" STATE="1" EDITORDER="6 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
    <source>METHOD hardcode_reload.
 *&amp;---------------------------------------------------------------------*
 *&amp; Méthode         : HARDCODE_RELOAD                                   *
@@ -4263,12 +4314,12 @@ ENDMETHOD.</source>
   &quot; -----------------------------------------------------------
 
   &quot; Création instance d&apos;écriture
-  lo_attach_write = zcl_hardcode_shm_area=&gt;attach_for_write( CONV shm_inst_name( me-&gt;mv_repid ) ).
+  lo_attach_write = zcl_hardcode_shm_area=&gt;attach_for_write( CONV shm_inst_name( me-&gt;mv_key ) ).
 
   &quot; Création d&apos;une nouvelle version
   CREATE OBJECT lo_hardcode_root AREA HANDLE lo_attach_write
     EXPORTING
-      iv_repid = me-&gt;mv_repid.
+      iv_repid = me-&gt;mv_key+3. &quot;On se positionne après le mandant
 
   &quot; Initialisation de la version
   lo_attach_write-&gt;set_root( lo_hardcode_root ).
@@ -4277,7 +4328,52 @@ ENDMETHOD.</source>
   lo_attach_write-&gt;detach_commit( ).
 
   &quot; Récupère l&apos;instance de lecture
-  me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_repid ) ).
+  me-&gt;mo_attach_read = zcl_hardcode_shm_area=&gt;attach_for_read( CONV shm_inst_name( me-&gt;mv_key ) ).
+
+ENDMETHOD.</source>
+  </method>
+  <method CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_UNLOAD" VERSION="1" LANGU="F" DESCRIPT="Hardcode - SHM - Libération Instance" EXPOSURE="2" STATE="1" EDITORDER="8 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_UNLOAD" SCONAME="IV_REPID" VERSION="1" LANGU="F" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="SY-REPID"/>
+   <exception CLSNAME="ZCL_HARDCODE_SHM" CMPNAME="HARDCODE_UNLOAD" SCONAME="ZCX_HARDCODE_SHM" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Exception - Gestion SHM" MTDTYPE="0" EDITORDER="1 "/>
+   <source>METHOD hardcode_unload.
+*&amp;---------------------------------------------------------------------*
+*&amp; Méthode         : HARDCODE_UNLOAD                                   *
+*&amp; Classe          : ZCL_HARDCODE_SHM                                  *
+*&amp; Description     : Suppression Hardcode de la SHM                    *
+*                                                                      *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp; Créé par     : Olivier Véhier                                       *
+*                                                                      *
+*&amp; Créé le      : 01/02/2017                                           *
+*                                                                      *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp; Liste des modifications                                             *
+*&amp; Auteur      Date       Signature  Objet de la modification          *
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*                                                                      *
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+  TRY.
+      &quot; -----------------------------------------------------------
+      &quot; Libération de l&apos;Instance
+      &quot; -----------------------------------------------------------
+
+      zcl_hardcode_shm_area=&gt;invalidate_instance(
+          inst_name         = CONV shm_inst_name( |{ sy-mandt }{ iv_repid }| )
+          terminate_changer = abap_true
+      ).
+
+    CATCH cx_root INTO DATA(lo_cx_exception).
+      &quot; Erreur suppression de l&apos;Instance
+      zcl_hardcode_shm=&gt;__raise_exception( lo_cx_exception ).
+
+  ENDTRY.
 
 ENDMETHOD.</source>
   </method>
@@ -6704,6 +6800,19 @@ CLASS lcl_main IMPLEMENTATION.
         &quot; Sauvegarde les données
         me-&gt;mo_hardcode_maintain-&gt;save_to_db( abap_true ).
 
+        TRY.
+            IF zcl_hardcode_shm=&gt;hardcode_is_load( me-&gt;ms_selection_criteria-ov_repid-&gt;* ) EQ abap_true.
+              &quot; Hardcode présent dans la SHM
+              &quot;&quot;  --&gt; Pousse les modifications dans la SHM
+              zcl_hardcode_shm=&gt;get_instance( me-&gt;ms_selection_criteria-ov_repid-&gt;* )-&gt;hardcode_reload( ).
+
+            ENDIF.
+
+          CATCH zcx_hardcode_shm.
+            &quot; Une erreur est survenue // Tant pis ...
+
+        ENDTRY.
+
         &quot; Affiche message de succès
         MESSAGE s462(ab).
 
@@ -6858,6 +6967,18 @@ CLASS lcl_main IMPLEMENTATION.
 
         &quot;&quot;  --&gt; Sauvegarde les modifications en DB
         me-&gt;mo_hardcode_maintain-&gt;save_to_db( abap_true ).
+
+        TRY.
+            IF zcl_hardcode_shm=&gt;hardcode_is_load( me-&gt;ms_selection_criteria-ov_repid-&gt;* ) EQ abap_true.
+              &quot;&quot;  --&gt; Suppression en SHM
+              zcl_hardcode_shm=&gt;hardcode_unload( me-&gt;ms_selection_criteria-ov_repid-&gt;* ).
+
+            ENDIF.
+
+          CATCH zcx_hardcode_shm.
+            &quot; Une erreur est survenue // Tant pis ...
+
+        ENDTRY.
 
         &quot;&quot;  --&gt; Affiche message succès
         MESSAGE s007(zhardcode) WITH me-&gt;ms_selection_criteria-ov_repid-&gt;*.
@@ -7737,7 +7858,7 @@ CLASS lcl_main_tree IMPLEMENTATION.
     &quot; Séparateur
     me-&gt;ms_display_element-display_element-o_toolbar-&gt;add_button(
       EXPORTING
-        fcode            = &apos;SEP7&apos;                           &quot;#EC NOTEXT
+        fcode            = &apos;SEP1&apos;                           &quot;#EC NOTEXT
         icon             = text-del
         butn_type        = cntb_btype_sep
       EXCEPTIONS
@@ -7764,7 +7885,7 @@ CLASS lcl_main_tree IMPLEMENTATION.
     &quot; Séparateur
     me-&gt;ms_display_element-display_element-o_toolbar-&gt;add_button(
       EXPORTING
-        fcode            = &apos;SEP5&apos;                           &quot;#EC NOTEXT
+        fcode            = &apos;SEP2&apos;                           &quot;#EC NOTEXT
         icon             = text-del
         butn_type        = cntb_btype_sep
       EXCEPTIONS
@@ -7818,7 +7939,7 @@ CLASS lcl_main_tree IMPLEMENTATION.
     &quot; Séparateur
     me-&gt;ms_display_element-display_element-o_toolbar-&gt;add_button(
       EXPORTING
-        fcode            = &apos;SEP1&apos;                           &quot;#EC NOTEXT
+        fcode            = &apos;SEP4&apos;                           &quot;#EC NOTEXT
         icon             = text-del
         butn_type        = cntb_btype_sep
       EXCEPTIONS
@@ -7873,7 +7994,7 @@ CLASS lcl_main_tree IMPLEMENTATION.
     &quot; Séparateur
     me-&gt;ms_display_element-display_element-o_toolbar-&gt;add_button(
       EXPORTING
-        fcode            = &apos;SEP4&apos;                           &quot;#EC NOTEXT
+        fcode            = &apos;SEP5&apos;                           &quot;#EC NOTEXT
         icon             = text-del
         butn_type        = cntb_btype_sep
       EXCEPTIONS
@@ -7890,6 +8011,19 @@ CLASS lcl_main_tree IMPLEMENTATION.
         icon             = text-tra
         butn_type        = cntb_btype_button
         text             = text-ttr
+      EXCEPTIONS
+        cntl_error       = 1
+        cntb_btype_error = 2
+        cntb_error_fcode = 3
+        OTHERS           = 4
+    ).
+
+    &quot; Séparateur
+    me-&gt;ms_display_element-display_element-o_toolbar-&gt;add_button(
+      EXPORTING
+        fcode            = &apos;SEP6&apos;                           &quot;#EC NOTEXT
+        icon             = text-del
+        butn_type        = cntb_btype_sep
       EXCEPTIONS
         cntl_error       = 1
         cntb_btype_error = 2
@@ -11398,8 +11532,8 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
 PROCESS AFTER INPUT.
   MODULE user_command_0201.</dynproflowsource>
    </dynpro>
-   <dynpro PROG="ZTEC_HARDCODE" DNUM="0101" FNUM="0101" BZMX="27 " BZBR="130 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="27 " NOCO="130 " VALP="0 " CUAN="G" SPRA="F" DTEXT="Hardcode">
-    <dynprofield FNAM="CC_MAIN_TREE" DIDX="001B" FLG1="00" FLG2="00" FLG3="00" FILL="U" FMB1="30" FMB2="00" LENG="82" LINE="01" COLN="02" LANF="00" LBLK="00" LREP="00" AUTH="101" AGLT="01" ADEZ="01"/>
+   <dynpro PROG="ZTEC_HARDCODE" DNUM="0101" FNUM="0101" BZMX="20 " BZBR="130 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="23 " NOCO="130 " VALP="0 " CUAN="G" SPRA="F" DTEXT="Hardcode">
+    <dynprofield FNAM="CC_MAIN_TREE" DIDX="0014" FLG1="00" FLG2="00" FLG3="00" FILL="U" FMB1="30" FMB2="00" LENG="82" LINE="01" COLN="02" LANF="00" LBLK="00" LREP="00" AUTH="101" AGLT="01" ADEZ="01"/>
     <dynprofield DIDX="0000" FLG1="80" FLG2="10" FLG3="00" FMB1="00" FMB2="00" LENG="14" LINE="FF" COLN="01" LTYP="O" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" AGLT="00" ADEZ="00" STXT="____________________"/>
     <dynproflowsource>PROCESS BEFORE OUTPUT.
  MODULE STATUS_0101.
