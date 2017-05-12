@@ -6262,7 +6262,6 @@ ENDMETHOD.</source>
  <MSAG ARBGB="ZHARDCODE" MASTERLANG="F" RESPUSER="DELAWARE" STEXT="Hardcode - Classe message">
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="000" TEXT="[Général]"/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="001" TEXT="Aucun hardcode (actif) présent pour le programme &amp;."/>
-  <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="002" TEXT='Veuillez sélectionner une ligne &quot;Version&quot;.'/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="003" TEXT="Hardcode ajouté dans l&apos;OT &amp;."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="004" TEXT="Inconsistence détéctée dans la table des Hardcodes."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="100" TEXT="[ Version ]"/>
@@ -6288,6 +6287,7 @@ ENDMETHOD.</source>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="007" TEXT="Hardcode &amp; supprimé"/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="600" TEXT="[ SHM ]"/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="601" TEXT="Hardcode &amp; géré en mémoire partagée"/>
+  <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="002" TEXT='Veuillez sélectionner une ligne &quot;Version&quot;.'/>
   <t100t SPRSL="F" ARBGB="ZHARDCODE" STEXT="Hardcode - Classe message"/>
  </MSAG>
  <PROG NAME="ZTEC_HARDCODE_TOP" VARCL="X" SUBC="I" LEVL="740" RMAND="400" RLOAD="F" UCCHECK="X">
@@ -12378,8 +12378,8 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
 PROCESS AFTER INPUT.
   MODULE user_command_0201.</dynproflowsource>
    </dynpro>
-   <dynpro PROG="ZTEC_HARDCODE" DNUM="0101" FNUM="0101" BZMX="20 " BZBR="130 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="23 " NOCO="130 " VALP="0 " CUAN="G" SPRA="F" DTEXT="Hardcode">
-    <dynprofield FNAM="CC_MAIN_TREE" DIDX="0014" FLG1="00" FLG2="00" FLG3="00" FILL="U" FMB1="30" FMB2="00" LENG="82" LINE="01" COLN="02" LANF="00" LBLK="00" LREP="00" AUTH="101" AGLT="01" ADEZ="01"/>
+   <dynpro PROG="ZTEC_HARDCODE" DNUM="0101" FNUM="0101" BZMX="30 " BZBR="140 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="30 " NOCO="140 " VALP="0 " CUAN="G" SPRA="F" DTEXT="Hardcode">
+    <dynprofield FNAM="CC_MAIN_TREE" DIDX="001E" FLG1="00" FLG2="00" FLG3="00" FILL="U" FMB1="30" FMB2="00" LENG="8C" LINE="01" COLN="02" LANF="00" LBLK="00" LREP="00" AUTH="101" AGLT="01" ADEZ="01"/>
     <dynprofield DIDX="0000" FLG1="80" FLG2="10" FLG3="00" FMB1="00" FMB2="00" LENG="14" LINE="FF" COLN="01" LTYP="O" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" AGLT="00" ADEZ="00" STXT="____________________"/>
     <dynproflowsource>PROCESS BEFORE OUTPUT.
  MODULE STATUS_0101.
