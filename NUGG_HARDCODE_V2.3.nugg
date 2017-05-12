@@ -7200,16 +7200,28 @@ CLASS lcl_main IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Supprimer
-    sscrfields-functxt_01 = text-del.
+    sscrfields-functxt_01 = VALUE smp_dyntxt(
+      icon_id   = text-del
+      quickinfo = text-tde
+    ).
 
     &quot; Copier
-    sscrfields-functxt_02 = text-cop.
+    sscrfields-functxt_02 = VALUE smp_dyntxt(
+      icon_id   = text-cop
+      quickinfo = text-tcy
+    ).
 
     &quot; Transporter
-    sscrfields-functxt_03 = text-tra.
+    sscrfields-functxt_03 = VALUE smp_dyntxt(
+      icon_id   = text-tra
+      quickinfo = text-ttr
+    ).
 
     &quot; MàJ SHM
-    sscrfields-functxt_04 = text-shm.
+    sscrfields-functxt_04 = VALUE smp_dyntxt(
+      icon_id   = text-shm
+      quickinfo = text-tsh
+    ).
 
   ENDMETHOD.
 
