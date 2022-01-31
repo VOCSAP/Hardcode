@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nugget name="HARDCODE_V6.0">
+<nugget name="HARDCODE_V6.1">
  <CLAS CLSNAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" CATEGORY="40" EXPOSURE="0" STATE="1" RELEASE="0" CLSFINAL="X" CLSCCINCL="X" FIXPT="X" UNICODE="X" CLSBCCAT="00" DURATION_TYPE="0 " RISK_LEVEL="0 " ZSAPLINK_PLUGIN_MAJOR_VERSION="0 " ZSAPLINK_PLUGIN_MINOR_VERSION="1 " ZSAPLINK_PLUGIN_BUILD_VERSION="0 " ZSAPLINK_PLUGIN_INFO1="ZSAPLINK_CLASS is part of the main ZSAPLINK project --&gt; This plugin found there instead of ZSAPLINK_PLUGINS projects" ZSAPLINK_PLUGIN_INFO2="SAPLINK homepage: https://www.assembla.com/spaces/saplink/wiki" ZSAPLINK_PLUGIN_INFO3="Download from https://www.assembla.com/code/saplink/subversion/nodes" ZSAPLINK_PLUGIN_INFO4="and navigate to:  trunk -&gt; core -&gt; ZSAPLINK -&gt; CLAS -&gt; ZSAPLINK_CLASS.slnk" REFCLSNAME="CX_DYNAMIC_CHECK">
   <friends CLSNAME="ZCX_HARDCODE_MAINTAIN" REFCLSNAME="ZCL_HARDCODE_FILE" FRIENDTYPE="0" VERSION="1" STATE="1"/>
   <friends CLSNAME="ZCX_HARDCODE_MAINTAIN" REFCLSNAME="ZCL_HARDCODE_MAINTAIN" FRIENDTYPE="0" VERSION="1" STATE="1"/>
@@ -5216,7 +5216,7 @@ ENDMETHOD.</source>
   <attribute CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="MS_DELETED_DATA" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="4 " ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="1" TYPE="ZCL_HARDCODE_MAINTAIN=&gt;TS_DELETED_DATA" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
   <attribute CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="MS_WORK_DATA" VERSION="1" LANGU="F" EXPOSURE="0" STATE="1" EDITORDER="3 " ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="1" TYPE="ZCL_HARDCODE_MAINTAIN=&gt;TS_WORK_DATA" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
   <attribute CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="MV_REPID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Identifiant" EXPOSURE="2" STATE="1" EDITORDER="2 " ATTDECLTYP="0" ATTRDONLY="X" ATTEXPVIRT="0" TYPTYPE="1" TYPE="ZTEC_HC_REPID" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " TYPESRC_LENG="0 "/>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_ADD" VERSION="1" LANGU="F" DESCRIPT="Attribut - Création" EXPOSURE="2" STATE="1" EDITORDER="13 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_ADD" VERSION="1" LANGU="F" DESCRIPT="Attribut - Création" EXPOSURE="2" STATE="1" EDITORDER="14 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_ADD" SCONAME="IV_PARAMETER_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_PARAMETER_GUID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_ADD" SCONAME="IS_ATTRIBUTE_LOGICAL_KEY" VERSION="1" LANGU="F" DESCRIPT="Attribut - Clef logique" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="TS_ATTRIBUTE_LOGICAL_KEY"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_ADD" SCONAME="IR_RANGES_VALUE" VERSION="1" LANGU="F" DESCRIPT="Range" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="STANDARD TABLE" PAROPTIONL="X"/>
@@ -5421,7 +5421,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_COPY" VERSION="1" LANGU="F" DESCRIPT="Attribut - Copie" EXPOSURE="2" STATE="1" EDITORDER="16 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_COPY" VERSION="1" LANGU="F" DESCRIPT="Attribut - Copie" EXPOSURE="2" STATE="1" EDITORDER="17 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_COPY" SCONAME="IV_PARAMETER_GUID_COPY" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID à copier" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_COPY" SCONAME="IV_PARAMETER_GUID_NEW" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_COPY" SCONAME="IV_ATTRIBUTE_GUID_REGROUP_COPY" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Attribut - GUID Regroupement" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_ATTRIBUTE_GUID_REGROUP" PAROPTIONL="X" PARPREFERD="X"/>
@@ -5734,7 +5734,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_DEL" VERSION="1" LANGU="F" DESCRIPT="Attribut - Suppression" EXPOSURE="2" STATE="1" EDITORDER="15 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_DEL" VERSION="1" LANGU="F" DESCRIPT="Attribut - Suppression" EXPOSURE="2" STATE="1" EDITORDER="16 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_DEL" SCONAME="IV_PARAMETER_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_DEL" SCONAME="IV_ATTRIBUTE_GUID_REGROUP" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Attribut - GUID Regroupement" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_ATTRIBUTE_GUID_REGROUP" PAROPTIONL="X" PARPREFERD="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_DEL" SCONAME="IV_ATTRIBUTE_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Attribut - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_ATTRIBUTE_GUID" PAROPTIONL="X"/>
@@ -6116,17 +6116,15 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" VERSION="1" LANGU="F" DESCRIPT="Attribut - Modification" EXPOSURE="2" STATE="1" EDITORDER="14 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" VERSION="1" LANGU="F" DESCRIPT="Attribut - Modification" EXPOSURE="2" STATE="1" EDITORDER="15 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_PARAMETER_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_GUID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_ATTRIBUTE_GUID_REGROUP" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Attribut - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_ATTR-ATTRIBUTE_GUID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IS_NEW_ATTRIBUTE_LOGICAL_KEY" VERSION="1" LANGU="F" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="TS_ATTRIBUTE_LOGICAL_KEY" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IS_NEW_ATTRIBUTE_LOGICAL_KEYX" VERSION="1" LANGU="F" CMPTYPE="1" MTDTYPE="0" EDITORDER="4 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="TS_ATTRIBUTE_LOGICAL_KEYX" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IR_NEW_RANGES_VALUE" VERSION="1" LANGU="F" CMPTYPE="1" MTDTYPE="0" EDITORDER="5 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="STANDARD TABLE" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_REPLACE_RANGES_VALUE" VERSION="1" LANGU="F" DESCRIPT="Remplacement les valeurs du Range ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="6 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN" PAROPTIONL="X"/>
-   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_NEW_ATTRIBUTE_AS_RANGE" VERSION="1" LANGU="F" DESCRIPT="Témoin général" CMPTYPE="1" MTDTYPE="0" EDITORDER="7 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN" PAROPTIONL="X"/>
-   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IT_NEW_SOURCE_CODE_VALUE" VERSION="1" LANGU="F" DESCRIPT="Code Source" CMPTYPE="1" MTDTYPE="0" EDITORDER="8 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="STRINGTAB" PAROPTIONL="X"/>
-   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_NEW_ATTRIBUTE_AS_SOURCE_COD" VERSION="1" LANGU="F" DESCRIPT="Code Source présent ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="9 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN" PAROPTIONL="X"/>
-   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_REPLACE_SOURCE_CODE" VERSION="1" LANGU="F" DESCRIPT="Remplacement Code Source ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="10 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN" PAROPTIONL="X"/>
+   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IT_NEW_SOURCE_CODE_VALUE" VERSION="1" LANGU="F" DESCRIPT="Code Source" CMPTYPE="1" MTDTYPE="0" EDITORDER="7 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="STRINGTAB" PAROPTIONL="X"/>
+   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="IV_REPLACE_SOURCE_CODE" VERSION="1" LANGU="F" DESCRIPT="Remplacement Code Source ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="8 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="XSDBOOLEAN" PAROPTIONL="X"/>
    <exception CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="ATTRIBUTE_SET" SCONAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" MTDTYPE="0" EDITORDER="1 "/>
    <source>METHOD attribute_set.
 *&amp;---------------------------------------------------------------------*
@@ -6265,23 +6263,23 @@ ENDMETHOD.</source>
 
     ENDWHILE.
 
-    IF  is_new_attribute_logical_keyx-attribute_name EQ abap_true
-    AND lo_hardcode_attribute-&gt;attribute_name NE ls_new_attribute_logical_key-attribute_name.
-      &quot; Modificatîon du Nom
-      &quot;&quot;  --&gt; Contrôle si pas de doublon
-      IF me-&gt;attribute_exist(
-            iv_parameter_guid        = iv_parameter_guid
-            is_attribute_logical_key = ls_new_attribute_logical_key
-        ) EQ abap_true.
-        &quot; Un Paramètre avec ce nom existe déjà
-        &quot;&quot;  --&gt; Lève une Exception
-        IF 1 = 2. MESSAGE e302(zhardcode). ENDIF.
-        me-&gt;__raise_exception(
-            iv_msgno = 302
-            iv_msgv1 = ls_new_attribute_logical_key-attribute_name
-        ).
+  ENDIF.
 
-      ENDIF.
+  IF NOT is_new_attribute_logical_keyx IS INITIAL
+  OR lo_hardcode_attribute-&gt;attribute_name NE ls_new_attribute_logical_key-attribute_name.
+    &quot; Modificatîon du Nom ou des Clefs
+    &quot;&quot;  --&gt; Contrôle si pas de doublon
+    IF me-&gt;attribute_exist(
+          iv_parameter_guid        = iv_parameter_guid
+          is_attribute_logical_key = ls_new_attribute_logical_key
+      ) EQ abap_true.
+      &quot; Un Paramètre avec ce nom existe déjà
+      &quot;&quot;  --&gt; Lève une Exception
+      IF 1 = 2. MESSAGE e302(zhardcode). ENDIF.
+      me-&gt;__raise_exception(
+          iv_msgno = 302
+          iv_msgv1 = ls_new_attribute_logical_key-attribute_name
+      ).
 
     ENDIF.
 
@@ -6314,18 +6312,6 @@ ENDMETHOD.</source>
     lo_hardcode_attribute-&gt;attribute_key2 = ls_new_attribute_logical_key-attribute_key2.
     lo_hardcode_attribute-&gt;attribute_key3 = ls_new_attribute_logical_key-attribute_key3.
     lo_hardcode_attribute-&gt;attribute_key4 = ls_new_attribute_logical_key-attribute_key4.
-
-  ENDIF.
-
-  IF iv_new_attribute_as_range IS SUPPLIED.
-    &quot; Modification indicateur Range
-    lo_hardcode_attribute-&gt;attribute_as_range = iv_new_attribute_as_range.
-
-  ENDIF.
-
-  IF iv_new_attribute_as_source_cod IS SUPPLIED.
-    &quot; Modification indicateur Code Source
-    lo_hardcode_attribute-&gt;attribute_as_source_code = iv_new_attribute_as_source_cod.
 
   ENDIF.
 
@@ -6372,6 +6358,9 @@ ENDMETHOD.</source>
     &quot;&quot;  --&gt; Modification du Code Source
     &lt;lfs_s_hc_source_code&gt;-t_source_code[] = it_new_source_code_value[].
 
+    &quot;&quot;  --&gt; Réinitialisation Indicateur Code Source
+    lo_hardcode_attribute-&gt;attribute_as_source_code = xsdbool( NOT it_new_source_code_value[] IS INITIAL ).
+
   ENDIF.
 
   &quot; -----------------------------------------------------------
@@ -6414,7 +6403,7 @@ ENDMETHOD.</source>
               lo_hardcode_attribute-&gt;attribute_opti, lo_hardcode_attribute-&gt;attribute_high.
 
       &quot;&quot;  --&gt; Initialisation Indicateur données Range
-      lo_hardcode_attribute-&gt;attribute_as_range = abap_true.
+      lo_hardcode_attribute-&gt;attribute_as_range = xsdbool( NOT ir_new_ranges_value[] IS INITIAL ).
 
     ELSEIF lv_delta                EQ abap_true
        AND iv_replace_ranges_value EQ abap_false.
@@ -7438,7 +7427,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="INTEGRITY_CHECK" VERSION="1" LANGU="F" DESCRIPT="Données - Contrôle Intégrité" EXPOSURE="2" STATE="1" EDITORDER="19 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="INTEGRITY_CHECK" VERSION="1" LANGU="F" DESCRIPT="Données - Contrôle Intégrité" EXPOSURE="2" STATE="1" EDITORDER="20 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" BCMTDCAT="00" BCMTDSYN="0">
    <source>METHOD integrity_check.
 *&amp;---------------------------------------------------------------------*
 *&amp; Méthode         : INTEGRITY_CHECK                                   *
@@ -7495,7 +7484,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="IS_CHANGED" VERSION="1" LANGU="F" DESCRIPT="Données - Modifiées ?" EXPOSURE="2" STATE="1" EDITORDER="18 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="IS_CHANGED" VERSION="1" LANGU="F" DESCRIPT="Données - Modifiées ?" EXPOSURE="2" STATE="1" EDITORDER="19 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="IS_CHANGED" SCONAME="RV_CHANGED" VERSION="1" LANGU="F" DESCRIPT="Données modifiées" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="FLAG"/>
    <source>METHOD is_changed.
 *&amp;---------------------------------------------------------------------*
@@ -7601,7 +7590,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_ADD" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Création" EXPOSURE="2" STATE="1" EDITORDER="9 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_ADD" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Création" EXPOSURE="2" STATE="1" EDITORDER="10 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_ADD" SCONAME="IV_VERSION_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_VERSION_GUID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_ADD" SCONAME="IV_PARAMETER_NAME" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - Nom" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_PARAMETER_NAME"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_ADD" SCONAME="ES_PARAMETER_DATA" VERSION="1" LANGU="F" DESCRIPT="HC - Poste table de Customizing" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="1" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM"/>
@@ -7698,7 +7687,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_COPY" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Copie" EXPOSURE="2" STATE="1" EDITORDER="12 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_COPY" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Copie" EXPOSURE="2" STATE="1" EDITORDER="13 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_COPY" SCONAME="IV_VERSION_GUID_COPY" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_VERS-VERSION_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_COPY" SCONAME="IV_VERSION_GUID_NEW" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_VERSION_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_COPY" SCONAME="IV_PARAMETER_GUID_COPY" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="3 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_PARAMETER_GUID" PAROPTIONL="X" PARPREFERD="X"/>
@@ -8020,7 +8009,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_DEL" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Suppression" EXPOSURE="2" STATE="1" EDITORDER="11 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_DEL" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Suppression" EXPOSURE="2" STATE="1" EDITORDER="12 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_DEL" SCONAME="IV_VERSION_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_VERS-VERSION_GUID" PAROPTIONL="X"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_DEL" SCONAME="IV_PARAMETER_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_PARAMETER_GUID" PAROPTIONL="X" PARPREFERD="X"/>
    <source>METHOD parameter_del.
@@ -8255,7 +8244,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_SET" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Modification" EXPOSURE="2" STATE="1" EDITORDER="10 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_SET" VERSION="1" LANGU="F" DESCRIPT="Paramètre - Modification" EXPOSURE="2" STATE="1" EDITORDER="11 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_SET" SCONAME="IV_PARAMETER_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_GUID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_SET" SCONAME="IV_NEW_PARAMETER_NAME" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Paramètre - Nom" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_T_HC_PARAM-PARAMETER_NAME" PAROPTIONL="X"/>
    <exception CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="PARAMETER_SET" SCONAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" MTDTYPE="0" EDITORDER="1 "/>
@@ -8349,7 +8338,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="SAVE_TO_DB" VERSION="1" LANGU="F" DESCRIPT="Données - Sauvegarde en DB" EXPOSURE="2" STATE="1" EDITORDER="17 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="SAVE_TO_DB" VERSION="1" LANGU="F" DESCRIPT="Données - Sauvegarde en DB" EXPOSURE="2" STATE="1" EDITORDER="18 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="SAVE_TO_DB" SCONAME="IV_COMMIT" VERSION="1" LANGU="F" DESCRIPT="Commit des données ?" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="FLAG" PARVALUE="ABAP_TRUE"/>
    <exception CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="SAVE_TO_DB" SCONAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" MTDTYPE="0" EDITORDER="1 "/>
    <source>METHOD save_to_db.
@@ -8711,7 +8700,7 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TRANSPORT_REQUEST_CREATE" VERSION="1" LANGU="F" DESCRIPT="Transport - Création OT" EXPOSURE="2" STATE="1" EDITORDER="20 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TRANSPORT_REQUEST_CREATE" VERSION="1" LANGU="F" DESCRIPT="Transport - Création OT" EXPOSURE="2" STATE="1" EDITORDER="21 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="1" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TRANSPORT_REQUEST_CREATE" SCONAME="IV_REPID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Identifiant" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_REPID"/>
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TRANSPORT_REQUEST_CREATE" SCONAME="RV_TRKORR" VERSION="1" LANGU="F" DESCRIPT="Ordre/Tâche" CMPTYPE="1" MTDTYPE="0" EDITORDER="2 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="TRKORR"/>
    <exception CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="TRANSPORT_REQUEST_CREATE" SCONAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" MTDTYPE="0" EDITORDER="1 "/>
@@ -8937,8 +8926,8 @@ ENDMETHOD.</source>
     IF 1 = 2. MESSAGE e101(zhardcode). ENDIF.
     me-&gt;__raise_exception(
         iv_msgno = 101
-        iv_msgv1 = me-&gt;mv_repid
-        iv_msgv2 = iv_version_id
+        iv_msgv1 = iv_version_id
+        iv_msgv2 = me-&gt;mv_repid
     ).
 
   ENDIF.
@@ -9412,7 +9401,37 @@ ENDMETHOD.</source>
 
 ENDMETHOD.</source>
   </method>
-  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_PRIMARY_SET" VERSION="1" LANGU="F" DESCRIPT="Version - Initialisation Primarité" EXPOSURE="2" STATE="1" EDITORDER="8 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_GET_NEXT" VERSION="1" LANGU="F" DESCRIPT="Version - Prochain numéro" EXPOSURE="2" STATE="1" EDITORDER="8 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_GET_NEXT" SCONAME="RV_VERSION" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - ID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="ZTEC_HC_VERSION_ID"/>
+   <source>METHOD version_get_next.
+
+***==================================================================***
+**                             TRAITEMENT                             **
+***==================================================================***
+
+  &quot; -----------------------------------------------------------
+  &quot; Détermine prochain numéro de Version
+  &quot; -----------------------------------------------------------
+
+  &quot; Récupération du dernier numéro de Version
+  READ TABLE me-&gt;ms_work_data-t_hardcode_version
+       INDEX lines( me-&gt;ms_work_data-t_hardcode_version )
+   USING KEY second_key ASSIGNING FIELD-SYMBOL(&lt;lfs_s_hardcode_version&gt;).
+  IF sy-subrc NE 0.
+    &quot; Pas de Version défini
+    &quot;&quot;  --&gt; N° de Version = 1
+    MOVE 1 TO rv_version.
+
+  ELSE.
+    &quot; Version défini
+    &quot;&quot;  --&gt; Incrémenation de la Version
+    rv_version = &lt;lfs_s_hardcode_version&gt;-version_id + 1.
+
+  ENDIF.
+
+ENDMETHOD.</source>
+  </method>
+  <method CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_PRIMARY_SET" VERSION="1" LANGU="F" DESCRIPT="Version - Initialisation Primarité" EXPOSURE="2" STATE="1" EDITORDER="9 " DISPID="0 " MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" BCMTDCAT="00" BCMTDSYN="0">
    <parameter CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_PRIMARY_SET" SCONAME="IV_VERSION_GUID" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Version - GUID" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="ZTEC_HC_VERSION_GUID"/>
    <exception CLSNAME="ZCL_HARDCODE_MAINTAIN" CMPNAME="VERSION_PRIMARY_SET" SCONAME="ZCX_HARDCODE_MAINTAIN" VERSION="1" LANGU="F" DESCRIPT="Hardcode - Classe maintenance" MTDTYPE="0" EDITORDER="1 "/>
    <source>METHOD version_primary_set.
@@ -11089,7 +11108,6 @@ CALLCONTROL-RETALLFLDS = abap_true.
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="203" TEXT="Veuillez saisir un nom de Paramètre valide."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="300" TEXT="[ Attribut ]"/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="301" TEXT="L&apos;Attribut &amp; n&apos;existe pas."/>
-  <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="302" TEXT="L&apos;Attribut &amp; existe déjà."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="303" TEXT="Veuillez saisir un nom d&apos;Attribut valide."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="400" TEXT="[Exploitation]"/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="401" TEXT="Dans ce cas le numéro de Version est obligatoire."/>
@@ -11135,6 +11153,8 @@ CALLCONTROL-RETALLFLDS = abap_true.
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="008" TEXT="Aucune log d&apos;exécution disponible."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="012" TEXT="Programme obligatoire."/>
   <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="710" TEXT="#$TRKORR=&amp;"/>
+  <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="304" TEXT="Veuillez sélectionner une ligne de Paramètre"/>
+  <t100 SPRSL="F" ARBGB="ZHARDCODE" MSGNR="302" TEXT="L&apos;Attribut &amp; existe déjà avec cette combinaison de clefs"/>
   <t100t SPRSL="F" ARBGB="ZHARDCODE" STEXT="Hardcode - Classe message"/>
  </MSAG>
  <PROG NAME="ZTEC_HARDCODE_XPRA_TRANSPORT" VARCL="X" SUBC="1" APPL="*" RSTAT="K" RMAND="200" RLOAD="F" FIXPT="X" UCCHECK="X">
@@ -12083,6 +12103,14 @@ CLASS lcl_main_tree_event IMPLEMENTATION.
     &quot; Suivant la colonne sélectionnée
     CASE fieldname.
 
+      WHEN cl_alv_tree_base=&gt;c_hierarchy_column_name
+        OR &apos;ATTRIBUTE_KEY1&apos; OR &apos;ATTRIBUTE_KEY2&apos; OR &apos;ATRIBUTE_KEY3&apos; OR &apos;ATRIBUTE_KEY4&apos;.
+        &quot; Hiérarchie ou Clef
+        &quot;&quot;  --&gt; Affiche édition du Noeud
+        RAISE EVENT on_hierarchy_edit
+          EXPORTING
+            iv_node_key = node_key.
+
       WHEN &apos;ATTRIBUTE_AS_RANGE_ICON&apos; ##NO_TEXT.
         &quot; Range
         &quot;&quot;  --&gt; Récupération Range
@@ -12439,7 +12467,7 @@ CLASS lcl_main IMPLEMENTATION.
       IF sy-subrc NE 0.
         &quot; Une erreur est survenue
         &quot;&quot;  --&gt; Retourne code erreur
-        MESSAGE w397(0d).
+        MESSAGE s397(0d) DISPLAY LIKE if_msg_output=&gt;msgtype_warning.
         ev_subrc = 4.
 
       ENDIF.
@@ -12855,13 +12883,20 @@ CLASS lcl_main IMPLEMENTATION.
 
     lv_method = |PAI_{ sy-dynnr }|.                         ##NO_TEXT
 
-    &quot; -----------------------------------------------------------
-    &quot; Appel PAI
-    &quot; -----------------------------------------------------------
+    TRY.
+        &quot; -----------------------------------------------------------
+        &quot; Appel PAI
+        &quot; -----------------------------------------------------------
 
-    CALL METHOD me-&gt;(lv_method)
-      EXPORTING
-        iv_ucomm = ok_code.
+        CALL METHOD me-&gt;(lv_method)
+          EXPORTING
+            iv_ucomm = ok_code.
+
+      CATCH cx_root.
+        &quot; Erreur appel dynamique
+        RETURN.
+
+    ENDTRY.
 
   ENDMETHOD.
 
@@ -13124,7 +13159,7 @@ CLASS lcl_main IMPLEMENTATION.
              cr_range     = lor_range-&gt;*
           ) IS INITIAL.
             &quot; Erreur édition Range
-            MESSAGE w397(0d).
+            MESSAGE s397(0d) DISPLAY LIKE if_msg_output=&gt;msgtype_warning.
 
           ENDIF.
 
@@ -16077,7 +16112,7 @@ CLASS lcl_main_tree IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Evènement modification
-    RAISE EVENT on_change.
+    RAISE EVENT submit_change.
 
     &quot; Récupération paramètrage Hiérarchique
     READ TABLE me-&gt;ms_display_element-display_element-t_hierarchy
@@ -16131,16 +16166,11 @@ CLASS lcl_main_tree IMPLEMENTATION.
 
     me-&gt;ms_display_element-display_element-o_alv_tree-&gt;expand_node(
       EXPORTING
-        i_node_key          = iv_node_parent
-        i_level_count       = 3
-        i_expand_subtree    = abap_true
-      EXCEPTIONS                                          ##SUBRC_OK
-        failed              = 1
-        illegal_level_count = 2
-        cntl_system_error   = 3
-        node_not_found      = 4
-        cannot_expand_leaf  = 5
-        OTHERS              = 6
+        i_node_key       = iv_node_parent
+        i_level_count    = 3
+        i_expand_subtree = abap_true
+      EXCEPTIONS
+        OTHERS           = 0
     ).
 
   ENDMETHOD.
@@ -16451,6 +16481,7 @@ CLASS lcl_attribute_detail IMPLEMENTATION.
                                                    attribute_high = high
                                                    attribute_opti = option
                                      ).
+      cs_attribute_detail-attribute_as_range-&gt;* = xsdbool( NOT cot_attribute_range_value-&gt;* IS INITIAL ).
 
       &quot;&quot;  --&gt; Initialisation Code Source
       REFRESH : cot_source_code-&gt;*.
@@ -16560,7 +16591,10 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Sur l&apos;ALV
-    SET HANDLER me-&gt;handler_on_change              FOR me-&gt;mo_main_tree.
+    SET HANDLER me-&gt;handler_submit_change              FOR me-&gt;mo_main_tree.
+
+    &quot; Sur le Gestionnaire d&apos;Event de l&apos;ALV
+    SET HANDLER me-&gt;handler_on_hierarchy_edit      FOR me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_event.
 
     &quot; Sur la barre d&apos;outil
     SET HANDLER me-&gt;handler_on_copy                FOR me-&gt;mo_toolbar_event.
@@ -16783,7 +16817,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Evènement modification
-    me-&gt;handler_on_change( ).
+    me-&gt;handler_submit_change( ).
 
     &quot; Suppression arboresence
     me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_alv_tree-&gt;delete_subtree(
@@ -17377,7 +17411,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
            AND system_key EQ me-&gt;mo_main_tree-&gt;ms_system.
 
         &quot; Evènement modification
-        me-&gt;handler_on_change( ).
+        me-&gt;handler_submit_change( ).
 
         &quot; Message succès
         MESSAGE s505(zhardcode) WITH me-&gt;mo_main_tree-&gt;mv_repid.
@@ -17478,7 +17512,8 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; Récupération données Noeud sélectionné
     ls_selected_line = me-&gt;mo_main_tree-&gt;line_selected_get(
       EXPORTING
-        iv_parent_node_ref = me-&gt;mo_main_tree-&gt;ms_display_element-display_element-t_hierarchy[ node_level = 2 ]-node_level_key_fieldname
+        iv_parent_node_ref = me-&gt;mo_main_tree-&gt;ms_display_element-display_element-t_hierarchy[
+                              node_level = 2 ]-node_level_key_fieldname
       IMPORTING
         ev_subrc           = lv_subrc
         ev_parent_node_key = lv_parent_node_key
@@ -17497,7 +17532,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     IF ls_selected_line-parameter_guid IS INITIAL.
       &quot; Pas de GUID de Paramètre // Il s&apos;agit d&apos;une ligne &quot;Version&quot;
       &quot;&quot;  --&gt; Affiche message d&apos;erreur
-      MESSAGE s104(zhardcode) DISPLAY LIKE if_msg_output=&gt;msgtype_error.
+      MESSAGE s304(zhardcode) DISPLAY LIKE if_msg_output=&gt;msgtype_error.
       RETURN.
 
     ENDIF.
@@ -17589,7 +17624,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         &quot; Ajout du Noeud
         me-&gt;mo_main_tree-&gt;node_add(
           is_data        = ls_hardcode_data_new
-          iv_node_level  = lcl_main_tree=&gt;mc_node_level_attribute
+          iv_node_level  = lcl_main_tree=&gt;mc_node_level-attribute
           iv_node_parent = lv_parent_node_key
         ).
 
@@ -17722,10 +17757,10 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
 
     TRY.
         &quot; Récupération du Numéro de Noeud
-        lv_node_key_old_primary = me-&gt;mo_main_tree-&gt;mt_level_node_key[ node_text = me-&gt;mo_main_tree-&gt;ms_display_element-data-t_display_data[
-                                                                                     version_primary = abap_true
-                                                                                   ]-version_id
-                                                                     ]-node_key.
+        lv_node_key_old_primary = me-&gt;mo_main_tree-&gt;mt_level_node_key[
+          node_text = me-&gt;mo_main_tree-&gt;ms_display_element-data-t_display_data[
+            version_primary = abap_true ]-version_id
+        ]-node_key.
 
         &quot; Récupération des données du Noeud
         me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_alv_tree-&gt;get_outtab_line(
@@ -17747,7 +17782,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     IF ls_selected_line EQ ls_old_version_primary.
-      &quot; Ligne sélectionné = Ancienne Ligne primaire
+      &quot; Ligne sélectionnée = Ancienne Ligne primaire
       &quot;&quot;  --&gt; Récupération de la première Version
       lv_selected_node = CONV lvc_nkey( cl_sedi_abs_nav_tree=&gt;c_root_key ).
       me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_alv_tree-&gt;get_outtab_line(
@@ -17805,7 +17840,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         ).
 
         &quot; Evènement modification
-        me-&gt;handler_on_change( ).
+        me-&gt;handler_submit_change( ).
 
         &quot; Modification de l&apos;affichage
         me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_alv_tree-&gt;update_calculations( ).
@@ -17897,7 +17932,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
 
   ENDMETHOD.
 
-  METHOD handler_on_change.
+  METHOD handler_submit_change.
 
 ***==================================================================***
 **                           TRAITEMENT                               **
@@ -18221,7 +18256,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
       &quot;&quot;  --&gt;  Ajout du Noeud
       me-&gt;mo_main_tree-&gt;node_add(
         is_data        = ls_hardcode_data_new
-        iv_node_level  = lcl_main_tree=&gt;mc_node_level_attribute
+        iv_node_level  = lcl_main_tree=&gt;mc_node_level-attribute
         iv_node_parent = lv_parent_node_key
       ).
 
@@ -18316,7 +18351,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         &quot;&quot;  --&gt; Ajout du Noeud
         lv_version_node_key = me-&gt;mo_main_tree-&gt;node_add(
           is_data       = ls_hardcode_data_new
-          iv_node_level = lcl_main_tree=&gt;mc_node_level_version
+          iv_node_level = lcl_main_tree=&gt;mc_node_level-version
         ).
 
       ENDIF.
@@ -18341,7 +18376,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         &quot; Ajout du Noeud
         lv_parameter_node_key = me-&gt;mo_main_tree-&gt;node_add(
           is_data        = ls_hardcode_data_new
-          iv_node_level  = lcl_main_tree=&gt;mc_node_level_parameter
+          iv_node_level  = lcl_main_tree=&gt;mc_node_level-parameter
           iv_node_parent = lv_version_node_key
         ).
 
@@ -18397,7 +18432,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
             &quot; Ajout du Noeud
             me-&gt;mo_main_tree-&gt;node_add(
               is_data        = ls_hardcode_data_new
-              iv_node_level  = lcl_main_tree=&gt;mc_node_level_attribute
+              iv_node_level  = lcl_main_tree=&gt;mc_node_level-attribute
               iv_node_parent = lv_parameter_node_key
             ).
 
@@ -18479,6 +18514,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD handler_on_modify.
+
 ***==================================================================***
 **                             TRAITEMENT                             **
 ***==================================================================***
@@ -18488,11 +18524,26 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Affiche détail de la ligne en édition
-    me-&gt;_line_detail( ).
+    me-&gt;_node_edit( ).
 
   ENDMETHOD.
 
-  METHOD _line_detail.
+  METHOD handler_on_hierarchy_edit.
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+    &quot; -----------------------------------------------------------
+    &quot; Edition Noeud Hiérarchie
+    &quot; -----------------------------------------------------------
+
+    &quot; Traitement de modification
+    me-&gt;_node_edit( ).
+
+  ENDMETHOD.
+
+  METHOD _node_edit.
 
 ***------------------------------------------------------------------***
 **                             RANGES                                 **
@@ -18564,142 +18615,30 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
 
         IF NOT ls_selected_line-attribute_guid_regroup IS INITIAL.
           &quot; Attribut
-          &quot;&quot;  --&gt; Affichage outil saisi des données
-          me-&gt;mo_main_tree-&gt;attribute_detail_display(
-            IMPORTING
-              ev_cancel                     = lv_cancel
-              et_source_code                = lt_source_code
-              er_ranges_value               = lr_ranges_value
-              et_attribute_range_value      = lt_attribute_range_value
-              es_new_attribute_logical_key  = ls_new_attribute_logical_key
-              es_new_attribute_logical_keyx = ls_new_attribute_logical_keyx
-            CHANGING
-              cs_hardcode_data              = ls_selected_line
-          ).
-          IF lv_cancel        EQ abap_true
-          OR me-&gt;mo_main_tree-&gt;mv_read_only EQ abap_true.
-            &quot; L&apos;utilisateur à annulé les modifications
-            &quot;&quot;  --&gt; Arrêt du traitement
-            RETURN.
-
-          ENDIF.
-
-          &quot;&quot;  --&gt; Modification des données l&apos;Attribut
-          me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;attribute_set(
-              iv_parameter_guid              = ls_selected_line-parameter_guid
-              iv_attribute_guid_regroup      = ls_selected_line-attribute_guid_regroup
-              is_new_attribute_logical_key   = ls_new_attribute_logical_key
-              is_new_attribute_logical_keyx  = ls_new_attribute_logical_keyx
-              ir_new_ranges_value            = lr_ranges_value
-              iv_replace_ranges_value        = abap_true
-              iv_new_attribute_as_range      = ls_selected_line-attribute_as_range
-              it_new_source_code_value       = lt_source_code
-              iv_new_attribute_as_source_cod = ls_selected_line-attribute_as_source_code
-              iv_replace_source_code         = abap_true
-          ).
-
-          &quot;&quot;  --&gt; Initialisation données du Range
-          READ TABLE me-&gt;mo_main_tree-&gt;ms_persistent_data-t_hc_data
-          WITH TABLE KEY repid      = me-&gt;mo_main_tree-&gt;mv_repid
-                         system_key = me-&gt;mo_main_tree-&gt;ms_system
-               ASSIGNING FIELD-SYMBOL(&lt;lfs_s_hc_data&gt;).
-          IF sy-subrc EQ 0.
-            TRY.
-                &quot;&quot;  --&gt; Modification valeurs du Range
-                &lt;lfs_s_hc_data&gt;-t_attribute_range[ attribute_guid_regroup  = ls_selected_line-attribute_guid_regroup
-                                                 ]-t_attribute_range_value = lt_attribute_range_value.
-
-              CATCH cx_sy_itab_line_not_found.
-                &quot; L&apos;entrée n&apos;existe pas
-                &quot;&quot;  --&gt; Création d&apos;une nouvelle entrée
-                ls_attribute_range-attribute_guid_regroup  = ls_selected_line-attribute_guid_regroup.
-                ls_attribute_range-t_attribute_range_value = lt_attribute_range_value[].
-                INSERT ls_attribute_range INTO TABLE &lt;lfs_s_hc_data&gt;-t_attribute_range.
-
-            ENDTRY.
-
-            TRY.
-                &quot;&quot;  --&gt; Modification Code Source
-                &lt;lfs_s_hc_data&gt;-t_source_code[ attribute_guid_regroup  = ls_selected_line-attribute_guid_regroup
-                                             ]-t_source_code = lt_source_code.
-
-              CATCH cx_sy_itab_line_not_found.
-                &quot; L&apos;entrée n&apos;existe pas
-                &quot;&quot;  --&gt; Création d&apos;une nouvelle entrée
-                ls_source_code-attribute_guid_regroup  = ls_selected_line-attribute_guid_regroup.
-                ls_source_code-t_source_code = lt_source_code[].
-                INSERT ls_source_code INTO TABLE &lt;lfs_s_hc_data&gt;-t_source_code.
-
-            ENDTRY.
-
-          ENDIF.
-
-          &quot;&quot;  --&gt; Modification des Icônes
-          ls_selected_line-attribute_as_range_icon = me-&gt;mo_main_tree-&gt;icon_attribute_range_set(
-            ls_selected_line-attribute_as_range
-          ).
-          ls_selected_line-attribute_as_source_code_icon = me-&gt;mo_main_tree-&gt;icon_attribute_source_code_set(
-            ls_selected_line-attribute_as_source_code
-          ).
+          &quot;&quot;  --&gt; Modification Noeud
+          me-&gt;_node_edit_attribute( CHANGING cs_selected_line = ls_selected_line ).
 
           &quot;&quot;  --&gt; Initialisation niveau de Noeud
           lv_node_level = 3.                                ##NO_TEXT
 
         ELSEIF NOT ls_selected_line-parameter_guid IS INITIAL.
           &quot; Paramètre
-          &quot;&quot;  --&gt; PopUp saisi Nom
-          ls_selected_line-parameter_name = me-&gt;mo_main_tree-&gt;mo_main-&gt;call_popup_input_simple(
-            EXPORTING
-              iv_text      = ls_selected_line-parameter_name
-              iv_title     = text-npa
-              iv_read_only = me-&gt;mo_main_tree-&gt;mv_read_only
-            IMPORTING
-              ev_subrc     = lv_subrc
-          ).
-          IF NOT lv_subrc IS INITIAL
-          OR me-&gt;mo_main_tree-&gt;mv_read_only EQ abap_true.
-            &quot; Action interrompue || Affichage uniquement
-            &quot;&quot;  --&gt; Arrêt du traitement
-            RETURN.
-
-          ENDIF.
-
-          &quot;&quot;  --&gt; Modification des données du Paramètre
-          me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;parameter_set(
-              iv_parameter_guid     = ls_selected_line-parameter_guid
-              iv_new_parameter_name = ls_selected_line-parameter_name
-          ).
+          &quot;&quot;  --&gt; Modification Noeud
+          me-&gt;_node_edit_parameter( CHANGING cs_selected_line = ls_selected_line ).
 
           &quot;&quot;  --&gt; Initialisation niveau de Noeud
           lv_node_level = 2.                                ##NO_TEXT
 
         ELSEIF NOT ls_selected_line-version_guid IS INITIAL.
           &quot; Version
-          &quot;&quot;  --&gt; PopUp saisi Nom
-          ls_selected_line-version_id = me-&gt;mo_main_tree-&gt;mo_main-&gt;call_popup_input_simple(
-            EXPORTING
-              iv_text      = ls_selected_line-version_id
-              iv_title     = text-nve
-              iv_read_only = me-&gt;mo_main_tree-&gt;mv_read_only
-            IMPORTING
-              ev_subrc     = lv_subrc
-          ).
-          IF NOT lv_subrc IS INITIAL
-          OR me-&gt;mo_main_tree-&gt;mv_read_only EQ abap_true.
-            &quot; Action interrompue || Affichage uniquement
-            &quot;&quot;  --&gt; Arrêt du traitement
-            RETURN.
-
-          ENDIF.
-
-          &quot;&quot;  --&gt; Modification des données de la Version
-          me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;version_set(
-              iv_version_guid   = ls_selected_line-version_guid
-              iv_new_version_id = ls_selected_line-version_id
-          ).
+          &quot;&quot;  --&gt; Modification Noeud
+          me-&gt;_node_edit_version( CHANGING cs_selected_line = ls_selected_line ).
 
           &quot;&quot;  --&gt; Initialisation niveau de Noeud
           lv_node_level = 1.                                ##NO_TEXT
+
+          &quot;&quot;  --&gt; Arrêt du traitement
+          RETURN.
 
         ENDIF.
 
@@ -18724,7 +18663,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     ENDTRY.
 
     &quot; Evènement modification
-    me-&gt;handler_on_change( ).
+    me-&gt;handler_submit_change( ).
 
     &quot; Récupération configuration de l&apos;affichage
     zcl_gui_alv_tree_util=&gt;hierarchy_usage(
@@ -18753,6 +18692,190 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
 
     &quot; Modification de l&apos;affichage
     me-&gt;mo_main_tree-&gt;ms_display_element-display_element-o_alv_tree-&gt;update_calculations( ).
+
+  ENDMETHOD.
+
+  METHOD _node_edit_version.
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+    &quot; -----------------------------------------------------------
+    &quot; Traitement Edition Version
+    &quot; -----------------------------------------------------------
+
+    &quot; Pas d&apos;édition
+    RETURN.
+
+  ENDMETHOD.
+
+  METHOD _node_edit_parameter.
+
+***------------------------------------------------------------------***
+**                            VARIABLES                               **
+***------------------------------------------------------------------***
+    DATA :
+      lv_subrc TYPE sy-subrc.
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+    &quot; -----------------------------------------------------------
+    &quot; PopIn Edition
+    &quot; -----------------------------------------------------------
+
+    &quot; PopUp saisi Nom
+    cs_selected_line-parameter_name = me-&gt;mo_main_tree-&gt;mo_main-&gt;call_popup_input_simple(
+      EXPORTING
+        iv_text      = cs_selected_line-parameter_name
+        iv_title     = text-npa
+        iv_read_only = me-&gt;mo_main_tree-&gt;mv_read_only
+      IMPORTING
+        ev_subrc     = lv_subrc
+    ).
+    IF NOT lv_subrc IS INITIAL
+    OR me-&gt;mo_main_tree-&gt;mv_read_only EQ abap_true.
+      &quot; Action interrompue || Affichage uniquement
+      &quot;&quot;  --&gt; Arrêt du traitement
+      RETURN.
+
+    ENDIF.
+
+    &quot; -----------------------------------------------------------
+    &quot; Modification dans le modèle
+    &quot; -----------------------------------------------------------
+
+    &quot; Modification des données du Paramètre
+    me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;parameter_set(
+        iv_parameter_guid     = cs_selected_line-parameter_guid
+        iv_new_parameter_name = cs_selected_line-parameter_name
+    ).
+
+  ENDMETHOD.
+
+  METHOD _node_edit_attribute.
+
+***------------------------------------------------------------------***
+**                             RANGES                                 **
+***------------------------------------------------------------------***
+    DATA :
+      lt_source_code  TYPE stringtab,
+      lr_ranges_value TYPE tt_r_ranges.
+
+***------------------------------------------------------------------***
+**                             TABLES                                 **
+***------------------------------------------------------------------***
+    DATA :
+      lt_attribute_range_value TYPE zcl_hardcode_maintain=&gt;tt_attribute_range_value_det.
+
+***------------------------------------------------------------------***
+**                            STRUCTURE                               **
+***------------------------------------------------------------------***
+    DATA :
+      ls_source_code                TYPE lcl_main_tree=&gt;ts_source_code,
+      ls_attribute_range            TYPE lcl_main_tree=&gt;ts_attribute_range,
+      ls_new_attribute_logical_key  TYPE zcl_hardcode_maintain=&gt;ts_attribute_logical_key,
+      ls_new_attribute_logical_keyx TYPE zcl_hardcode_maintain=&gt;ts_attribute_logical_keyx.
+
+***------------------------------------------------------------------***
+**                            VARIABLES                               **
+***------------------------------------------------------------------***
+    DATA :
+      lv_cancel TYPE flag.
+
+***==================================================================***
+**                           TRAITEMENT                               **
+***==================================================================***
+
+    &quot; -----------------------------------------------------------
+    &quot; PopIn Détail de l&apos;Attribut
+    &quot; -----------------------------------------------------------
+
+    &quot; Affichage outil saisi des données
+    me-&gt;mo_main_tree-&gt;attribute_detail_display(
+      IMPORTING
+        ev_cancel                     = lv_cancel
+        et_source_code                = lt_source_code
+        er_ranges_value               = lr_ranges_value
+        et_attribute_range_value      = lt_attribute_range_value
+        es_new_attribute_logical_key  = ls_new_attribute_logical_key
+        es_new_attribute_logical_keyx = ls_new_attribute_logical_keyx
+      CHANGING
+        cs_hardcode_data              = cs_selected_line
+    ).
+    IF lv_cancel EQ abap_true
+    OR me-&gt;mo_main_tree-&gt;mv_read_only EQ abap_true.
+      &quot; L&apos;utilisateur à annulé les modifications
+      &quot;&quot;  --&gt; Arrêt du traitement
+      RETURN.
+
+    ENDIF.
+
+    &quot; -----------------------------------------------------------
+    &quot; Modification dans le modèle de données
+    &quot; -----------------------------------------------------------
+
+    &quot; Modification des données l&apos;Attribut
+    me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;attribute_set(
+        iv_parameter_guid              = cs_selected_line-parameter_guid
+        iv_attribute_guid_regroup      = cs_selected_line-attribute_guid_regroup
+        is_new_attribute_logical_key   = ls_new_attribute_logical_key
+        is_new_attribute_logical_keyx  = ls_new_attribute_logical_keyx
+        ir_new_ranges_value            = lr_ranges_value
+        iv_replace_ranges_value        = abap_true
+        it_new_source_code_value       = lt_source_code
+        iv_replace_source_code         = abap_true
+    ).
+
+    &quot; Initialisation données du Range &amp; Code Source
+    READ TABLE me-&gt;mo_main_tree-&gt;ms_persistent_data-t_hc_data
+    WITH TABLE KEY repid      = me-&gt;mo_main_tree-&gt;mv_repid
+                   system_key = me-&gt;mo_main_tree-&gt;ms_system
+         ASSIGNING FIELD-SYMBOL(&lt;lfs_s_hc_data&gt;).
+    IF sy-subrc EQ 0.
+      TRY.
+          &quot;&quot;  --&gt; Modification valeurs du Range
+          &lt;lfs_s_hc_data&gt;-t_attribute_range[ attribute_guid_regroup  = cs_selected_line-attribute_guid_regroup
+                                           ]-t_attribute_range_value = lt_attribute_range_value.
+
+        CATCH cx_sy_itab_line_not_found.
+          &quot; L&apos;entrée n&apos;existe pas
+          &quot;&quot;  --&gt; Création d&apos;une nouvelle entrée
+          ls_attribute_range-attribute_guid_regroup  = cs_selected_line-attribute_guid_regroup.
+          ls_attribute_range-t_attribute_range_value = lt_attribute_range_value[].
+          INSERT ls_attribute_range INTO TABLE &lt;lfs_s_hc_data&gt;-t_attribute_range.
+
+      ENDTRY.
+
+      TRY.
+          &quot;&quot;  --&gt; Modification Code Source
+          &lt;lfs_s_hc_data&gt;-t_source_code[ attribute_guid_regroup  = cs_selected_line-attribute_guid_regroup
+                                       ]-t_source_code = lt_source_code.
+
+        CATCH cx_sy_itab_line_not_found.
+          &quot; L&apos;entrée n&apos;existe pas
+          &quot;&quot;  --&gt; Création d&apos;une nouvelle entrée
+          ls_source_code-attribute_guid_regroup  = cs_selected_line-attribute_guid_regroup.
+          ls_source_code-t_source_code = lt_source_code[].
+          INSERT ls_source_code INTO TABLE &lt;lfs_s_hc_data&gt;-t_source_code.
+
+      ENDTRY.
+
+    ENDIF.
+
+    &quot; -----------------------------------------------------------
+    &quot; Autres modifications
+    &quot; -----------------------------------------------------------
+
+    &quot; Modification des Icônes
+    cs_selected_line-attribute_as_range_icon = me-&gt;mo_main_tree-&gt;icon_attribute_range_set(
+      cs_selected_line-attribute_as_range
+    ).
+    cs_selected_line-attribute_as_source_code_icon = me-&gt;mo_main_tree-&gt;icon_attribute_source_code_set(
+      cs_selected_line-attribute_as_source_code
+    ).
 
   ENDMETHOD.
 
@@ -18805,7 +18928,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
     &quot; -----------------------------------------------------------
 
     &quot; Affichage détail (lecture seule)
-    me-&gt;_line_detail( ).
+    me-&gt;_node_edit( ).
 
   ENDMETHOD.
 
@@ -18835,28 +18958,16 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
 ***==================================================================***
 
     &quot; -----------------------------------------------------------
-    &quot; Pop-Up saisie du Nom
+    &quot; Détermination du Numéro de Version
     &quot; -----------------------------------------------------------
 
-    ls_hardcode_data_new-version_id = me-&gt;mo_main_tree-&gt;mo_main-&gt;call_popup_input_simple(
-      EXPORTING
-        iv_title = text-nve
-      IMPORTING
-        ev_subrc = lv_subrc
-    ).
-    IF NOT lv_subrc IS INITIAL.
-      &quot; Une erreur est survenue
-      &quot;&quot;  --&gt; Arrêt du traitement
-      RETURN.
-
-    ENDIF.
+    ls_hardcode_data_new-version_id = me-&gt;mo_main_tree-&gt;mo_main-&gt;mo_hardcode_maintain-&gt;version_get_next( ).
 
     &quot; -----------------------------------------------------------
     &quot; Contrôle validité de la saisie
     &quot; -----------------------------------------------------------
 
-    IF ls_hardcode_data_new-version_id IS INITIAL
-    OR ls_hardcode_data_new-version_id CS sy-abcde.
+    IF ls_hardcode_data_new-version_id IS INITIAL.
       &quot; Aucune saisie
       &quot;&quot;  --&gt; Arrêt du traitement
       MESSAGE s104(zhardcode) DISPLAY LIKE if_msg_output=&gt;msgtype_error.
@@ -18885,7 +18996,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         &quot; Ajout du Noeud
         me-&gt;mo_main_tree-&gt;node_add(
           is_data       = ls_hardcode_data_new
-          iv_node_level = lcl_main_tree=&gt;mc_node_level_version
+          iv_node_level = lcl_main_tree=&gt;mc_node_level-version
         ).
 
         &quot; Affiche bouton &quot;Modifier Primarité&quot;
@@ -18998,7 +19109,7 @@ CLASS lcl_main_tree_toolbar_handler IMPLEMENTATION.
         &quot; Ajout du Noeud
         me-&gt;mo_main_tree-&gt;node_add(
           is_data            = ls_hardcode_data_new
-          iv_node_level      = lcl_main_tree=&gt;mc_node_level_parameter
+          iv_node_level      = lcl_main_tree=&gt;mc_node_level-parameter
           iv_node_parent     = lv_parent_node_key
         ).
 
@@ -19249,15 +19360,10 @@ CLASS lcl_main DEFINITION FINAL CREATE PRIVATE.
     METHODS at_selection_screen_output.
 
     &quot; PBO - Gestion
-    METHODS pbo
-      IMPORTING
-        !iv_dynpro TYPE sy-dynnr DEFAULT sy-dynnr.
+    METHODS pbo.
 
     &quot; PAI - Gestion
-    METHODS pai
-      IMPORTING
-        !iv_ucomm  TYPE sy-ucomm
-        !iv_dynpro TYPE sy-dynnr DEFAULT sy-dynnr.
+    METHODS pai.
 
     &quot; Affichage Comparaison
     METHODS hardcode_compare_display
@@ -19636,16 +19742,19 @@ CLASS lcl_main_tree DEFINITION FINAL FRIENDS lcl_main_tree_toolbar_handler.
 *	Déclaration d&apos;évènement
 
     &quot; Evènement changement
-    EVENTS on_change.
+    EVENTS submit_change.
 
 ***------------------------------------------------------------------***
 **                            ATTRIBUTS                               **
 ***------------------------------------------------------------------***
 
 *	Déclaration d&apos;attributs
-    CONSTANTS : mc_node_level_version TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 1. ##NO_TEXT
-    CONSTANTS : mc_node_level_parameter TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 2. ##NO_TEXT
-    CONSTANTS : mc_node_level_attribute TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 3. ##NO_TEXT
+    CONSTANTS :
+      BEGIN OF mc_node_level,
+        version   TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 1, ##NO_TEXT
+        parameter TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 2, ##NO_TEXT
+        attribute TYPE zcl_gui_alv_tree_util=&gt;ts_hierarchy-node_level VALUE 3, ##NO_TEXT
+      END OF mc_node_level.
 
     DATA : mv_repid TYPE sy-repid READ-ONLY.
     DATA : ms_system TYPE ts_system READ-ONLY.
@@ -20035,6 +20144,10 @@ CLASS lcl_main_tree_event DEFINITION FINAL CREATE PRIVATE.
 
 *  Déclaration d&apos;évènements
 
+    &quot; Edition noeud hiérarchie
+    EVENTS on_hierarchy_edit
+      EXPORTING
+        VALUE(iv_node_key) TYPE lvc_nkey.
 
 ***------------------------------------------------------------------***
 **                            ATTRIBUTS                               **
@@ -20193,12 +20306,14 @@ CLASS lcl_main_tree_toolbar_handler DEFINITION FINAL CREATE PRIVATE.
          OF lcl_main_tree_toolbar_event.
     METHODS handler_on_cancel              FOR EVENT on_cancel
          OF lcl_main_tree_toolbar_event.
-    METHODS handler_on_change              FOR EVENT on_change
+    METHODS handler_submit_change              FOR EVENT submit_change
          OF lcl_main_tree.
     METHODS handler_on_delete              FOR EVENT on_delete
          OF lcl_main_tree_toolbar_event.
     METHODS handler_on_modify              FOR EVENT on_modify
          OF lcl_main_tree_toolbar_event.
+    METHODS handler_on_hierarchy_edit      FOR EVENT on_hierarchy_edit
+         OF lcl_main_tree_event.
     METHODS handler_on_display             FOR EVENT on_display
          OF lcl_main_tree_toolbar_event.
     METHODS handler_on_compare             FOR EVENT on_compare
@@ -20273,7 +20388,22 @@ CLASS lcl_main_tree_toolbar_handler DEFINITION FINAL CREATE PRIVATE.
       RETURNING VALUE(rs_return)     TYPE bapiret2.
 
     &quot; Affichage de la ligne
-    METHODS _line_detail.
+    METHODS _node_edit.
+
+    &quot; Modification Noeud Version
+    METHODS _node_edit_version
+      CHANGING cs_selected_line TYPE lcl_main_tree=&gt;ts_hc_data
+      RAISING  zcx_hardcode_maintain.
+
+    &quot; Modification Noeud Paramètre
+    METHODS _node_edit_parameter
+      CHANGING cs_selected_line TYPE lcl_main_tree=&gt;ts_hc_data
+      RAISING  zcx_hardcode_maintain.
+
+    &quot; Modification Noeud Attribute
+    METHODS _node_edit_attribute
+      CHANGING cs_selected_line TYPE lcl_main_tree=&gt;ts_hc_data
+      RAISING  zcx_hardcode_maintain.
 
     &quot; Modification affichage des boutons
     METHODS _button_visibility_set
@@ -20429,8 +20559,10 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="CO2" ENTRY="Create TO" LENGTH="13 "/>
     <textElement ID="I" KEY="COP" ENTRY="@14@" LENGTH="14 "/>
     <textElement ID="I" KEY="COS" ENTRY="Source Code" LENGTH="11 "/>
-    <textElement ID="I" KEY="CRE" ENTRY="Crea" LENGTH="5 "/>
+    <textElement ID="I" KEY="CRE" ENTRY="Create" LENGTH="10 "/>
     <textElement ID="I" KEY="CSD" ENTRY="Modify values" LENGTH="20 "/>
+    <textElement ID="I" KEY="CTD" ENTRY="Direct" LENGTH="16 "/>
+    <textElement ID="I" KEY="CTT" ENTRY="TR" LENGTH="40 "/>
     <textElement ID="I" KEY="DEL" ENTRY="@11@" LENGTH="4 "/>
     <textElement ID="I" KEY="DIS" ENTRY="Display" LENGTH="18 "/>
     <textElement ID="I" KEY="DLO" ENTRY="Data lost" LENGTH="16 "/>
@@ -20461,6 +20593,7 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="PDE" ENTRY="@11@" LENGTH="4 "/>
     <textElement ID="I" KEY="PRI" ENTRY="Primarity" LENGTH="9 "/>
     <textElement ID="I" KEY="QCA" ENTRY="Are you sure that you want to cancel the modifications ?" LENGTH="96 "/>
+    <textElement ID="I" KEY="QCT" ENTRY="Choosen of transport&apos;s mode" LENGTH="52 "/>
     <textElement ID="I" KEY="RAN" ENTRY="Range" LENGTH="5 "/>
     <textElement ID="I" KEY="REP" ENTRY="@8M@" LENGTH="4 "/>
     <textElement ID="I" KEY="SHM" ENTRY="@6H@" LENGTH="4 "/>
@@ -20473,8 +20606,10 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="TB4" ENTRY="By Value" LENGTH="20 "/>
     <textElement ID="I" KEY="TCA" ENTRY="Cancel" LENGTH="17 "/>
     <textElement ID="I" KEY="TCO" ENTRY="What do you want to do ?" LENGTH="26 "/>
+    <textElement ID="I" KEY="TCT" ENTRY="Which mode of transport did you want to use ?" LENGTH="96 "/>
     <textElement ID="I" KEY="TCY" ENTRY="Copy" LENGTH="16 "/>
     <textElement ID="I" KEY="TDE" ENTRY="Delete" LENGTH="9 "/>
+    <textElement ID="I" KEY="TDI" ENTRY="@KB@" LENGTH="14 "/>
     <textElement ID="I" KEY="TMO" ENTRY="Modify" LENGTH="8 "/>
     <textElement ID="I" KEY="TOR" ENTRY="OR ?" LENGTH="14 "/>
     <textElement ID="I" KEY="TQ1" ENTRY="Are you sure that you want to delete this Node and all his child?" LENGTH="65 "/>
@@ -20483,9 +20618,12 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="TQ4" ENTRY="Hardcode &amp; already exist. Confirm overwrite ?" LENGTH="120 "/>
     <textElement ID="I" KEY="TQ5" ENTRY="Do you want to Import or Export ?" LENGTH="102 "/>
     <textElement ID="I" KEY="TRA" ENTRY="@7Q@" LENGTH="4 "/>
+    <textElement ID="I" KEY="TRR" ENTRY="@K4@" LENGTH="14 "/>
     <textElement ID="I" KEY="TSF" ENTRY="File&apos;s selection" LENGTH="40 "/>
     <textElement ID="I" KEY="TSH" ENTRY="SHM update" LENGTH="17 "/>
     <textElement ID="I" KEY="TSW" ENTRY="Modify Primarity" LENGTH="18 "/>
+    <textElement ID="I" KEY="TTI" ENTRY="@4A@" LENGTH="14 "/>
+    <textElement ID="I" KEY="TTM" ENTRY="Transport" LENGTH="19 "/>
     <textElement ID="I" KEY="TTR" ENTRY="Transport" LENGTH="11 "/>
     <textElement ID="I" KEY="VCR" ENTRY="@EV@" LENGTH="4 "/>
     <textElement ID="I" KEY="VDE" ENTRY="@ES@" LENGTH="4 "/>
@@ -20504,7 +20642,7 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="S" KEY="S_ALOW" ENTRY="D       ." LENGTH="24 "/>
     <textElement ID="S" KEY="S_ANAME" ENTRY="D       ." LENGTH="16 "/>
     <textElement ID="S" KEY="S_PNAME" ENTRY="D       ." LENGTH="17 "/>
-    <textElement ID="S" KEY="S_REPID" ENTRY="D       ." LENGTH="24 "/>
+    <textElement ID="S" KEY="S_REPID" ENTRY="D       ." LENGTH="28 "/>
    </language>
    <language SPRAS="F">
     <textElement ID="I" KEY="ATT" ENTRY="@4G@" LENGTH="4 "/>
@@ -20514,7 +20652,7 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="CO2" ENTRY="Créer un OT" LENGTH="13 "/>
     <textElement ID="I" KEY="COP" ENTRY="@14@" LENGTH="14 "/>
     <textElement ID="I" KEY="COS" ENTRY="Code Source" LENGTH="11 "/>
-    <textElement ID="I" KEY="CRE" ENTRY="Créer" LENGTH="5 "/>
+    <textElement ID="I" KEY="CRE" ENTRY="Créer" LENGTH="10 "/>
     <textElement ID="I" KEY="CSD" ENTRY="Modification valeurs" LENGTH="20 "/>
     <textElement ID="I" KEY="CTD" ENTRY="Direct" LENGTH="16 "/>
     <textElement ID="I" KEY="CTT" ENTRY="OT" LENGTH="40 "/>
@@ -20532,7 +20670,7 @@ ENDCLASS.             &quot;lcl_ATTRIBUTE_DETAIL DEFINITION</source>
     <textElement ID="I" KEY="IME" ENTRY="@HL@" LENGTH="14 "/>
     <textElement ID="I" KEY="IMP" ENTRY="Importer" LENGTH="17 "/>
     <textElement ID="I" KEY="IP2" ENTRY="Nouveau nom" LENGTH="21 "/>
-    <textElement ID="I" KEY="IRA" ENTRY="@OP@" LENGTH="4 "/>
+    <textElement ID="I" KEY="IRA" ENTRY="@5N@" LENGTH="4 "/>
     <textElement ID="I" KEY="IXP" ENTRY="Import / Export" LENGTH="25 "/>
     <textElement ID="I" KEY="LOW" ENTRY="Limite inf." LENGTH="11 "/>
     <textElement ID="I" KEY="MOD" ENTRY="@0Z@" LENGTH="4 "/>
@@ -20942,7 +21080,7 @@ MODULE status_0101 OUTPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PBO 0101
-  go_main-&gt;pbo( sy-dynnr ).
+  go_main-&gt;pbo( ).
 
 ENDMODULE.                 &quot; STATUS_0101  OUTPUT
 
@@ -20962,10 +21100,7 @@ MODULE user_command_0101 INPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PAI 0101
-  go_main-&gt;pai(
-    iv_ucomm  = ok_code
-    iv_dynpro = sy-dynnr
-  ).
+  go_main-&gt;pai( ).
 
 ENDMODULE.                 &quot; USER_COMMAND_0101  INPUT
 
@@ -20985,7 +21120,7 @@ MODULE status_0201 OUTPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PBO 0201
-  go_main-&gt;pbo( sy-dynnr ).
+  go_main-&gt;pbo( ).
 
 ENDMODULE.                 &quot; STATUS_0201  OUTPUT
 
@@ -21006,10 +21141,7 @@ MODULE user_command_0201 INPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PAI
-  go_main-&gt;pai(
-    iv_ucomm  = ok_code
-    iv_dynpro = sy-dynnr
-  ).
+  go_main-&gt;pai( ).
 
 ENDMODULE.                 &quot; USER_COMMAND_0201  INPUT
 
@@ -21029,7 +21161,7 @@ MODULE status_0301 OUTPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PBO 0301
-  go_main-&gt;pbo( sy-dynnr ).
+  go_main-&gt;pbo( ).
 
 ENDMODULE.
 
@@ -21049,10 +21181,7 @@ MODULE user_command_0301.
   &quot; -----------------------------------------------------------
 
   &quot; PAI
-  go_main-&gt;pai(
-    iv_ucomm  = ok_code
-    iv_dynpro = sy-dynnr
-  ).
+  go_main-&gt;pai( ).
 
 ENDMODULE.                 &quot; USER_COMMAND_0302  INPUT
 
@@ -21072,7 +21201,7 @@ MODULE status_0302 OUTPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PBO 0301
-  go_main-&gt;pbo( sy-dynnr ).
+  go_main-&gt;pbo( ).
 
 ENDMODULE.
 
@@ -21092,10 +21221,7 @@ MODULE user_command_0302.
   &quot; -----------------------------------------------------------
 
   &quot; PAI
-  go_main-&gt;pai(
-    iv_ucomm  = ok_code
-    iv_dynpro = sy-dynnr
-  ).
+  go_main-&gt;pai( ).
 
 ENDMODULE.                 &quot; USER_COMMAND_0302  INPUT
 
@@ -21136,7 +21262,7 @@ MODULE status_2000 OUTPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PBO
-  go_main-&gt;pbo( sy-dynnr ).
+  go_main-&gt;pbo( ).
 
 ENDMODULE.
 
@@ -21156,10 +21282,7 @@ MODULE user_command_2000 INPUT.
   &quot; -----------------------------------------------------------
 
   &quot; PAI
-  go_main-&gt;pai(
-    iv_ucomm  = ok_code
-    iv_dynpro = sy-dynnr
-  ).
+  go_main-&gt;pai( ).
 
 ENDMODULE.</source>
  </PROG>
